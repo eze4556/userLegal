@@ -67,10 +67,10 @@ export class FirestoreService {
     await setDoc(newDocRef, data);
   }
 
-  async updateDocument<T>(data: UpdateData<T>, enlace: string, idDoc: string): Promise<void> {
-    const document = docWithConverter<T>(this.firestore, `${enlace}/${idDoc}`);
-    return updateDoc(document, data);
-  }
+  // async updateDocument<T>(data: UpdateData<T>, enlace: string, idDoc: string): Promise<void> {
+  //   const document = docWithConverter<T>(this.firestore, `${enlace}/${idDoc}`);
+  //   return updateDoc(document, data);
+  // }
 
   deleteDocumentID(enlace: string, idDoc: string): Promise<void> {
     const document = doc(this.firestore, `${enlace}/${idDoc}`);
